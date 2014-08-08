@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>singleton</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>TopLevel</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>class var sharedInstance : &lt;# ClassName #&gt; {
+    struct Static {
+        static var onceToken : dispatch_once_t = 0
+        static var instance : &lt;# ClassName #&gt;? = nil
+    }
+    dispatch_once(&amp;Static.onceToken) {
+        Static.instance = &lt;# ClassName #&gt;()
+    }
+    return Static.instance!
+}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>E0070C71-5EFB-46DA-AA8C-977CF3857189</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>A singleton shared instance getter.</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>Singleton</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>0</integer>
+</dict>
+</plist>
